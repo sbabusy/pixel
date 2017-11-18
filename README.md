@@ -1,2 +1,2 @@
 # pixel
-voice browsing poc
+Voice browser poc using artyom.js
