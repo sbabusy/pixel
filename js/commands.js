@@ -11,7 +11,7 @@ var commands = [{
     {
         indexes: ["go to home"],
         action: function() {
-            window.location.href = './vzweb.html';
+            window.location.href = './index.html';
         }
     },
     {
