@@ -67,14 +67,14 @@ var commands = [{
         }
     },
 
-/*    {
+    {
         smart: true,
         indexes: ["Repeat after me *"],
         action: function(i, wildcard) {
             // Speak alterable value
             artyom.say(wildcard);
         }
-    }*/
+    },
 
     {
        indexes: ["read up to speed article"],
@@ -89,6 +89,16 @@ var commands = [{
 var artyom = new Artyom();
 
 artyom.addCommands(commands);
+
+artyom.redirectRecognizedTextOutput(function(output,isFinal){
+    if(!isFinal){
+        $("#output-artyom").text(output);
+    }else{
+        $("#output-artyom").text("");
+    }
+});
+
+
 
 artyom.initialize({
     lang: "en-GB", // More languages are documented in the library
